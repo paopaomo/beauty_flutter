@@ -1,3 +1,4 @@
+import 'package:beautyflutter/content_pager.dart';
 import 'package:flutter/material.dart';
 
 class TabNavigator extends StatefulWidget {
@@ -9,6 +10,7 @@ class _TabNavigatorState extends State<TabNavigator> {
   final _defaultColor = Colors.grey;
   final _activeColor = Colors.blue;
   int _currentIndex = 0;
+  final ContentPagerController _contentPagerController = ContentPagerController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +26,14 @@ class _TabNavigatorState extends State<TabNavigator> {
               end: Alignment.bottomCenter
           )
         ),
-        child: Center(
-          child: Text('你点击了第$_currentIndex个Tab', style: TextStyle(fontSize: 36, color: Colors.blue)),
-        ),
+        child: ContentPager(
+          onPageChanged: (int index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          contentPagerController: _contentPagerController,
+        )
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
@@ -56,6 +63,7 @@ class _TabNavigatorState extends State<TabNavigator> {
   }
 
   _handleTap(index) {
+    _contentPagerController.jumpToPage(index);
     setState(() {
       _currentIndex = index;
     });

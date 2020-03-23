@@ -29,7 +29,7 @@ class BaseCardState extends State<BaseCard> {
     );
   }
 
-  topContent() {
+  Widget topContent() {
     return Padding(
       padding: EdgeInsets.only(left: 20, top: 26, bottom: 20),
       child: Column(
@@ -81,6 +81,7 @@ class BaseCardState extends State<BaseCard> {
   Widget bottomTitle(String title) {
     return Text(
       title,
+      textAlign: TextAlign.center,
       style: TextStyle(
         fontSize: 12,
         color: bottomTitleColor

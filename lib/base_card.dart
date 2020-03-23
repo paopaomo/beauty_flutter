@@ -48,7 +48,7 @@ class BaseCardState extends State<BaseCard> {
     );
   }
 
-  bottomContent() {
+  Widget bottomContent() {
     return Container();
   }
 

@@ -8,7 +8,7 @@ class CardShare extends BaseCard {
 
 class _CardShareState extends BaseCardState {
   @override
-  bottomContent() {
+  Widget bottomContent() {
     return Expanded(
       child: Container(
         margin: EdgeInsets.only(top: 20),

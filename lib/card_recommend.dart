@@ -16,7 +16,7 @@ class _CardRecommendState extends BaseCardState {
   }
 
   @override
-  bottomContent() {
+  Widget bottomContent() {
     return Expanded(
       child: Container(
         constraints: BoxConstraints.expand(),

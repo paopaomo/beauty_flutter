@@ -1,3 +1,4 @@
+import 'package:beautyflutter/card_recommend.dart';
 import 'package:beautyflutter/custom_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -41,10 +42,10 @@ class _ContentPagerState extends State<ContentPager> {
         Expanded(
           child: PageView(
             children: <Widget>[
-              _wrapItem(0),
-              _wrapItem(1),
-              _wrapItem(2),
-              _wrapItem(3),
+              _wrapItem(CardRecommend()),
+              _wrapItem(CardRecommend()),
+              _wrapItem(CardRecommend()),
+              _wrapItem(CardRecommend()),
             ],
             controller: _pageController,
             onPageChanged: widget.onPageChanged
@@ -54,14 +55,10 @@ class _ContentPagerState extends State<ContentPager> {
     );
   }
 
-  Widget _wrapItem(index) {
+  Widget _wrapItem(Widget widget) {
     return Padding(
       padding: EdgeInsets.all(10),
-      child: Container(
-        decoration: BoxDecoration(
-          color: _colors[index]
-        ),
-      ),
+      child: widget
     );
   }
 

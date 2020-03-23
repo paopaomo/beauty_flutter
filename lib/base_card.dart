@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class BaseCart extends StatefulWidget {
+class BaseCard extends StatefulWidget {
   @override
-  BaseCartState createState() => BaseCartState();
+  BaseCardState createState() => BaseCardState();
 }
 
-class BaseCartState extends State<BaseCart> {
+class BaseCardState extends State<BaseCard> {
   Color subTitleColor = Colors.grey;
 
   @override

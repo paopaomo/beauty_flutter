@@ -3,12 +3,12 @@ import 'dart:ui';
 import 'package:beautyflutter/base_card.dart';
 import 'package:flutter/material.dart';
 
-class CardRecommend extends BaseCart {
+class CardRecommend extends BaseCard {
   @override
   _CardRecommendState createState() => _CardRecommendState();
 }
 
-class _CardRecommendState extends BaseCartState {
+class _CardRecommendState extends BaseCardState {
   @override
   void initState() {
     subTitleColor = Color(0xffb99444);
